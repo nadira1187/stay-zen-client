@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css';
 import { Link ,NavLink} from 'react-router-dom';
 import { useContext } from 'react';
 import { useEffect,useState } from 'react';
-import { AuthContext } from '../provider/AuthProvider';
+import { AuthContext } from '../../components/provider/AuthProvider';
 import { FaUserCircle } from "react-icons/fa";
 import swal from 'sweetalert';
 const links=<>
@@ -63,8 +63,8 @@ const Navbar = () => {
       </ul>
     </div>
    
-    <a className="btn btn-ghost normal-case invisible md:visible text-rose-500  text-4xl font-bold">
-    <img className='w-[40px] h-[40px] ' src="https://i.ibb.co/FHKFfWd/lotus-2982182.png" alt="icon1" border="0"/>LushBeauty</a>
+    <a className="btn btn-ghost normal-case invisible md:visible text-red-900  text-4xl font-bold">
+    <img className='w-[40px] h-[40px] ' src="https://i.ibb.co/th996Q3/hotel-png.png" alt="icon1" border="0"/>StayZen</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal gap-4 px-1">
