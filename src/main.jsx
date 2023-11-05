@@ -11,6 +11,11 @@ import Home from './pages/home/Home';
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import AuthProvider from './components/provider/AuthProvider';
+import Rooms from './pages/rooms/Rooms';
+import MyBookings from './pages/mybookings/MyBookings';
+import Details from './pages/details/Details';
+import BookRoom from './pages/bookroom/BookRoom';
+import PrivateRoute from './components/privateroute/PrivateRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +33,24 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/rooms",
+        element: <Rooms></Rooms>,
+      },
+      {
+        path: "/book/:id",
+        element:<PrivateRoute><BookRoom></BookRoom></PrivateRoute> ,
+        loader:({params}) => fetch(`http://localhost:5000/rooms/${params.id}`),
+      },
+      {
+        path: "/mybookings",
+        element: <MyBookings></MyBookings>,
+      },
+      {
+        path: "/details/:id",
+        element:<Details></Details> ,
+        loader:({params}) => fetch(`http://localhost:5000/rooms/${params.id}`),
       },
     ]
   },

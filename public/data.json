@@ -1,0 +1,82 @@
+[
+   
+    {
+      "id": 1,
+      "description": "Deluxe Room with Ocean View",
+      "pricePerNight": 250,
+      "roomSize": "350 sq. ft",
+      "availability": true,
+      "images": [
+        "https://i.ibb.co/3Wz1Fny/image1.jpg",
+        "https://i.ibb.co/rM4BcHh/image2.jpg",
+        "https://i.ibb.co/fxxhk5m/image3.jpg"
+      ],
+      "specialOffers": ["10% off for stays longer than 5 nights"]
+    },
+    {
+      "id": 2,
+      "description": "Luxury Suite with Terrace",
+      "pricePerNight": 450,
+      "roomSize": "600 sq. ft",
+      "availability": true,
+      "images": [
+        "https://i.ibb.co/N1vmBDT/image4.jpg",
+        "https://i.ibb.co/r0zx19R/image5.jpg",
+        "https://i.ibb.co/Gt3L49B/image6.jpg"
+      ],
+      "specialOffers": []
+    },
+    {
+      "id": 3,
+      "description": "Standard Room",
+      "pricePerNight": 150,
+      "roomSize": "250 sq. ft",
+      "availability": false,
+      "images": [
+        "https://i.ibb.co/z4k5ygN/image7.jpg",
+        "https://i.ibb.co/Zf8Ts48/image8.jpg",
+        "https://i.ibb.co/cYL8xkn/image9.jpg"
+      ],
+      "specialOffers": ["Complimentary breakfast"]
+    },
+    {
+      "id": 4,
+      "description": "Executive Suite with City View",
+      "pricePerNight": 350,
+      "roomSize": "500 sq. ft",
+      "availability": true,
+      "images": [
+        "https://i.ibb.co/nRHrnvN/image10.jpg",
+        "https://i.ibb.co/f2jJhF7/image11.jpg",
+        "https://i.ibb.co/9rL7zx6/image12.jpg"
+      ],
+      "specialOffers": ["15% off for direct bookings"]
+    },
+    {
+      "id": 5,
+      "description": "Family Room with Garden Access",
+      "pricePerNight": 300,
+      "roomSize": "450 sq. ft",
+      "availability": true,
+      "images": [
+        "hhttps://i.ibb.co/3rVwWzP/image13.jpg",
+        "https://i.ibb.co/PYF2sqq/image14.jpg",
+        "https://i.ibb.co/r0zx19R/image5.jpg"
+      ],
+      "specialOffers": []
+    },
+    {
+      "id": 6,
+      "description": "Honeymoon Suite with Private Jacuzzi",
+      "pricePerNight": 500,
+      "roomSize": "700 sq. ft",
+      "availability": true,
+      "images": [
+        "https://i.ibb.co/x7G3dgg/image19.jpg",
+        "https://i.ibb.co/QdCg5Yb/image17.jpg",
+        "https://i.ibb.co/BcQk8Rg/image18.jpg"
+      ],
+      "specialOffers": ["Romantic package with champagne"]
+    }
+  
+  ]
