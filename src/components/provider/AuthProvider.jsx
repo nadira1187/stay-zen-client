@@ -37,8 +37,8 @@ const AuthProvider = ({children}) => {
             {console.log("user in authstate",createUser);
         setUser(createUser);
         setLoading(false)});
-        return() => {
-            unsubscribe();
+         return() => {
+        unsubscribe();
         }
     },[]);
    
