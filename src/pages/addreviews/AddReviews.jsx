@@ -43,7 +43,7 @@ const AddReviews = () => {
                 <input type="text" name="ratings" placeholder="Add Rating" className="input input-bordered input-secondary w-full max-w-xs" />
                 <input type="text" name="days" placeholder="Days you stayed" className="input input-bordered input-secondary w-full max-w-xs" />
                 <textarea name="comment" placeholder="Your comment" className="textarea textarea-secondary textarea-md w-full max-w-xs" ></textarea>
-                <input className="btn btn-primary bg-red-900 border-none btn-wide text-white normal-case" type="submit" value="Order Confirm" />
+                <input className="btn btn-primary bg-red-900 border-none btn-wide text-white normal-case" type="submit" value="Add Review" />
             </div>
             </form>
             <Footer></Footer>

@@ -7,7 +7,7 @@ import ReviewCard from "./ReviewCard";
 const ReviewPage = () => {
     const reviews=useLoaderData([]);
     const {service_id}=reviews[0];
-    console.log(reviews[0])
+    console.log(reviews)
     console.log(service_id);
     return (
         <div>
@@ -15,7 +15,7 @@ const ReviewPage = () => {
             {
                 reviews?
                 (reviews.map((review)=>{
-                    <ReviewCard 
+                   return <ReviewCard 
                     key={review.service_id}
                     review={review}
                     ></ReviewCard>
