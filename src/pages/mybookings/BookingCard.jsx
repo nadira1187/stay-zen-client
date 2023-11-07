@@ -19,9 +19,9 @@ const BookingCard = ({booking,handleDelete}) => {
     <h2 className="">{service}</h2>
     <p>{price}</p>
     <div className="card-actions justify-evenly">
-      <button  className="btn btn-secondary"><Link to={`/updatebooking/${_id}`}>Update Booking</Link></button>
-      <button onClick={()=>handleDelete(_id)} className="btn btn-secondary">Cancel Booking</button>
-      <button className="btn btn-secondary"><Link to={`/addreview/${_id}`}>Add an Review</Link></button>
+      <button  className="btn bg-red-900 text-white normal-case"><Link to={`/updatebooking/${_id}`}>Update Booking</Link></button>
+      <button onClick={()=>handleDelete(_id)} className="btn bg-red-900 text-white normal-case">Cancel Booking</button>
+      <button className="btn bg-red-900 text-white normal-case"><Link to={`/addreview/${_id}`}>Add an Review</Link></button>
     </div>
     
     

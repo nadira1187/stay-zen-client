@@ -6,7 +6,7 @@ import swal from "sweetalert";
 
 const AddReviews = () => {
     const booking =useLoaderData([]);
-    const {service,_id,customerName}=booking;
+    const {service,_id,customerName,service_id}=booking;
     const handleAddReview=event=>{
         event.preventDefault();
         const form = event.target;
@@ -16,7 +16,7 @@ const AddReviews = () => {
         const comment=form.comment.value;
         const reviews={
             customerName:name,_id,
-            days,service,ratings,comment,
+            days,service,ratings,comment,service_id,
         }
         fetch('http://localhost:5000/reviews', {
             method: 'POST', 
@@ -38,12 +38,12 @@ const AddReviews = () => {
             <Navbar></Navbar>
             <h2 className="text-4xl text-red-900 text-center mt-4 mb-4">Add an review:{service }</h2>
             <form onSubmit={handleAddReview} >
-            <div className="flex flex-col gap-4  justify-center items-center mb-5">
+            <div className="  flex flex-col gap-4  justify-center items-center mb-5">
                 <input type="text" name="name" defaultValue={customerName} className="input input-bordered input-secondary w-full max-w-xs" />
                 <input type="text" name="ratings" placeholder="Add Rating" className="input input-bordered input-secondary w-full max-w-xs" />
                 <input type="text" name="days" placeholder="Days you stayed" className="input input-bordered input-secondary w-full max-w-xs" />
                 <textarea name="comment" placeholder="Your comment" className="textarea textarea-secondary textarea-md w-full max-w-xs" ></textarea>
-                <input className="btn btn-primary btn-block" type="submit" value="Order Confirm" />
+                <input className="btn btn-primary bg-red-900 border-none btn-wide text-white normal-case" type="submit" value="Order Confirm" />
             </div>
             </form>
             <Footer></Footer>

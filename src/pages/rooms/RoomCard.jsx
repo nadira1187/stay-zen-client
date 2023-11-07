@@ -22,7 +22,7 @@ const RoomCard = ({room}) => {
                     <h2 className="card-title">{description}</h2>
                     <p className="text-xl">Price:${pricePerNight}</p>
                     <div className="card-actions justify-center">
-                        <button className="btn btn-primary bg-red-900 border-red-900 normal-case"><Link to={`/book/${_id}`}>Book Now</Link></button>
+                        <button className="btn btn-primary text-white bg-red-900 border-red-900 normal-case"><Link to={`/review/${_id}`}>See Reviews</Link></button>
                     </div>
                 </div>
             </div>

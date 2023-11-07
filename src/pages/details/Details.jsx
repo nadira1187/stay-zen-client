@@ -21,20 +21,21 @@ const Details = () => {
                     </div>
                 </div>
                 <div className="ml-3 text-neutral-content">
-                    <h1 className="pt-10 text-3xl font-bold text-rose-600">
+                    <h1 className="pt-10 text-3xl font-bold text-red-900">
                         {room.description}
                     </h1>
-                    <p className="pt-4 text-base font-normal text-rose-600">
+                    <p className="pt-4 text-base font-normal text-red-900">
                         {room.roomSize}
                     </p>
                     {room.availability ? (
-                        <p className="pt-4 text-base font-normal text-rose-600">Availability: Available</p>
+                        <p className=" text-base font-normal text-red-900">Availability: Available</p>
                     ) : (
-                        <p className="pt-4 text-base font-normal text-rose-600">Availability: Not Available</p>
+                        <p className=" text-base font-normal text-red-900">Availability: Not Available</p>
                     )}
+                    <p className="text-base font-normal text-red-900">Special Offers :{room.specialOffers}</p>
                     <div className="flex justify-between">
-                        <p className="text-xl text-rose-600 font-semibold">Price: {room.pricePerNight}</p>
-                        <button className="my-6 btn normal-case btn-primary bg-rose-700 text-white border-none" ><Link to={`/book/${room._id}`}>  Book Now</Link>
+                        <p className="text-xl text-red-900 font-semibold">Price: ${room.pricePerNight}</p>
+                        <button className="my-6 btn normal-case btn-primary bg-red-900 text-white border-none" ><Link to={`/book/${room._id}`}>  Book Now</Link>
                           
                         </button>
                     </div>

@@ -53,24 +53,25 @@ const UpdateBooking = () => {
                     <label className="label">
                         <span className="label-text">Name</span>
                     </label>
-                    <input type="text" defaultValue={user?.displayName} name="name" className="input input-bordered" />
+                    <input type="text" defaultValue={user?.displayName} name="name" className="input input-accent input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Date</span>
                     </label>
-                    <input type="date" name="date" className="input input-bordered" />
+                    <input type="date" name="date" className="input input-accent input-bordered" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
-                    <input type="text" name="email" defaultValue={user?.email} placeholder="email" className="input input-bordered" />
+                    <input type="text" name="email" defaultValue={user?.email} placeholder="email" className="input input-accent input-bordered" />
                 </div>
+                <div className="form-control mt-9">
+                <input className="btn bg-red-900 normal-case text-white btn-block" type="submit" value=" Confirm Booking" />
             </div>
-            <div className="form-control mt-6">
-                <input className="btn btn-primary btn-block" type="submit" value="Order Confirm" />
             </div>
+           
         </form>
         <div className="card-body">
 

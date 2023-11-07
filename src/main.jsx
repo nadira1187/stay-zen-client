@@ -18,6 +18,7 @@ import BookRoom from './pages/bookroom/BookRoom';
 import PrivateRoute from './components/privateroute/PrivateRoute';
 import UpdateBooking from './pages/updateBooking/UpdateBooking';
 import AddReviews from './pages/addreviews/AddReviews';
+import ReviewPage from './pages/reviews/ReviewPage';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
         path: "/book/:id",
         element:<PrivateRoute><BookRoom></BookRoom></PrivateRoute> ,
         loader:({params}) => fetch(`http://localhost:5000/rooms/${params.id}`),
+      },
+      {
+        path:"/review/:id",
+        element:<ReviewPage></ReviewPage>,
+        loader:({params})=>fetch(`http://localhost:5000/review/${params.id}`),
       },
       {
         path: "/mybookings",

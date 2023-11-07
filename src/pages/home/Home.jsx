@@ -3,6 +3,8 @@ import SpecialOffer from "../../components/specialOffer/SpecialOffer";
 import Footer from "../../shared/footer/Footer";
 import Navbar from "../../shared/navbar/Navbar";
 import Featured from "./Featured";
+import { MyMap } from "./MyMap";
+import NewsLetter from "./NewsLetter";
 
 
 const Home = () => {
@@ -12,6 +14,8 @@ const Home = () => {
             <Banner></Banner>
             <Featured></Featured>
             <SpecialOffer></SpecialOffer>
+            <NewsLetter></NewsLetter>
+            <MyMap></MyMap>
             <Footer></Footer>
         </div>
     );
