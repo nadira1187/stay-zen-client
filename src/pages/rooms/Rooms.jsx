@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../../shared/navbar/Navbar";
 import RoomCard from "./RoomCard";
 import Footer from "../../shared/footer/Footer";
+import { Helmet } from "react-helmet";
 
 const Rooms = () => {
     const [rooms, setRooms] = useState([]);
@@ -24,6 +25,9 @@ console.log(rooms)
 
     return (
         <div>
+             <Helmet>
+                <title>Rooms</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className="mt-4 ml-0 lg:ml-4">
 

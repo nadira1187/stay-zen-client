@@ -5,6 +5,7 @@ import BookingCard from "./BookingCard";
 import Moment from "moment";
 import Swal from "sweetalert2";
 import Footer from "../../shared/footer/Footer";
+import { Helmet } from "react-helmet";
 
 const MyBookings = () => {
     const { user } = useContext(AuthContext);
@@ -78,8 +79,11 @@ const MyBookings = () => {
 
     return (
         <div>
+             <Helmet>
+                <title>Booking</title>
+            </Helmet>
             <Navbar></Navbar>
-            <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3">
                 {bookings.map((booking) => (
                     <BookingCard
                         key={booking._id}

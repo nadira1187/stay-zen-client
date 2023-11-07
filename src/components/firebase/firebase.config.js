@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDxE2BQa2hrxDhWDAkUWf3HHr18iGvbgQE",
-  authDomain: "stay-zen-client.firebaseapp.com",
-  projectId: "stay-zen-client",
-  storageBucket: "stay-zen-client.appspot.com",
-  messagingSenderId: "178111668976",
-  appId: "1:178111668976:web:5fd0f3e80f6427c2105835"
+  apiKey:import.meta.env.VITE_apiKey,
+  authDomain:import.meta.env.VITE_authDomain,
+  projectId:import.meta.env.VITE_projectId,
+  storageBucket:import.meta.env.VITE_storageBucket,
+  messagingSenderId:import.meta.env.VITE_messagingSenderId,
+  appId:import.meta.env.VITE_appId,
 };
 
 // Initialize Firebase

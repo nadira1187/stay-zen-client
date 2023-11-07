@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import Footer from "../../shared/footer/Footer";
 import Navbar from "../../shared/navbar/Navbar";
 import swal from "sweetalert";
+import { Helmet } from "react-helmet";
 
 
 const AddReviews = () => {
@@ -35,6 +36,9 @@ const AddReviews = () => {
     }
     return (
         <div>
+             <Helmet>
+                <title>Add review</title>
+            </Helmet>
             <Navbar></Navbar>
             <h2 className="text-4xl text-red-900 text-center mt-4 mb-4">Add an review:{service }</h2>
             <form onSubmit={handleAddReview} >

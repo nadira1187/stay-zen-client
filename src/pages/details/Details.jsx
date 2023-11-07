@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../../shared/navbar/Navbar";
 import Footer from "../../shared/footer/Footer";
+import { Helmet } from "react-helmet";
 
 
 const Details = () => {
@@ -8,6 +9,9 @@ const Details = () => {
    
     return (
         <div>
+             <Helmet>
+                <title>Details</title>
+            </Helmet>
             <Navbar></Navbar>
 
             <div className="max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto py-10" key={room._id}>

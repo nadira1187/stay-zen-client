@@ -3,6 +3,7 @@ import {Link} from "react-router-dom"
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Navbar from "../../shared/navbar/Navbar";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     const {createUser ,updateUser} = useContext(AuthContext)
@@ -47,6 +48,9 @@ const Register = () => {
     }
     return (
         <div>
+           <Helmet>
+                <title>Register</title>
+            </Helmet>
             <Navbar></Navbar>
         <div className="mt-10 flex justify-center items-center">
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

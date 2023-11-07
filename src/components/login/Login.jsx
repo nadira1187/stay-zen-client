@@ -6,6 +6,7 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import Navbar from "../../shared/navbar/Navbar";
 import { AuthContext } from "../provider/AuthProvider";
 import app from "../firebase/firebase.config";
+import { Helmet } from "react-helmet";
 //import axios from "axios";
 const Login = () => {
     const {signIn}=useContext(AuthContext);
@@ -60,6 +61,9 @@ const Login = () => {
     }
     return (
         <div>
+           <Helmet>
+                <title>Login</title>
+            </Helmet>
             <Navbar></Navbar>
         <div className="mt-10 flex justify-center items-center">
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

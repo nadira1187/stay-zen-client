@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../components/provider/AuthProvider";
 import swal from "sweetalert";
 import Navbar from "../../shared/navbar/Navbar";
+import { Helmet } from "react-helmet";
 
 
 const UpdateBooking = () => {
@@ -44,6 +45,9 @@ const UpdateBooking = () => {
     }
     return (
         <div>
+             <Helmet>
+                <title>Update book</title>
+            </Helmet>
             <Navbar></Navbar>
               <div className="p-4">
         <h2 className='text-center text-3xl'>Update booking: {service} </h2>
