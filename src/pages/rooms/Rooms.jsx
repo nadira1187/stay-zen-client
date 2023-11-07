@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../../shared/navbar/Navbar";
 import RoomCard from "./RoomCard";
+import Footer from "../../shared/footer/Footer";
 
 const Rooms = () => {
     const [rooms,setRooms] =useState([]);
@@ -23,7 +24,7 @@ const Rooms = () => {
             </div>
         </div>
 
-            
+          <Footer></Footer>  
         </div>
     );
 };

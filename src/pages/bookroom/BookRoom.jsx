@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../components/provider/AuthProvider";
 import swal from "sweetalert";
+import Navbar from "../../shared/navbar/Navbar";
 
 
 const BookRoom = () => {
@@ -47,7 +48,9 @@ const BookRoom = () => {
 
     }
     return (
-        <div className="p-4">
+        <div>
+            <Navbar></Navbar>
+              <div className="p-4">
         <h2 className='text-center text-3xl'>Book Service: {description} </h2>
         <form onSubmit={handleBookService}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -84,6 +87,8 @@ const BookRoom = () => {
 
         </div>
     </div>
+        </div>
+      
     );
 };
 

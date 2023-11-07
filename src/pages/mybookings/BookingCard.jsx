@@ -1,12 +1,13 @@
+import { Link } from "react-router-dom";
 
 
-const BookingCard = ({booking}) => {
-    const {images ,service,price}=booking;
+const BookingCard = ({booking,handleDelete}) => {
+    const {_id,images ,service,price}=booking;
     return (
-        <div>
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="mb-5 mt-5">
+            <div className="card card-compact w-92 lg:w-96 bg-base-100 shadow-xl">
   <figure>
-  <div className="w-76 carousel ">
+  <div className="w-72 lg:w-80  carousel ">
                 {images.map((image, index) => (
         <div className="carousel-item w-full" key={index}>
           <img src={image} className="w-full" alt={`Carousel Image ${index}`} />
@@ -15,12 +16,15 @@ const BookingCard = ({booking}) => {
             </div>
     </figure>
   <div className="card-body">
-    <h2 className="card-title">{service}</h2>
+    <h2 className="">{service}</h2>
     <p>{price}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Update Booking</button>
-      <button className="btn btn-primary">Delete Booking</button>
+    <div className="card-actions justify-evenly">
+      <button  className="btn btn-secondary"><Link to={`/updatebooking/${_id}`}>Update Booking</Link></button>
+      <button onClick={()=>handleDelete(_id)} className="btn btn-secondary">Cancel Booking</button>
+      <button className="btn btn-secondary"><Link to={`/addreview/${_id}`}>Add an Review</Link></button>
     </div>
+    
+    
   </div>
 </div>
         </div>

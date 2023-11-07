@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const RoomCard = ({room}) => {
     const{images,description,pricePerNight,_id}=room;
     return (
-        <div>
+        <div className="mb-5 mt-5">
             
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card card-compact w-92 bg-base-100 shadow-xl">
                 <figure>
                     <Link to={`/details/${_id}`}>
                 <div className="w-76 carousel ">

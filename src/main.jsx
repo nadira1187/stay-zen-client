@@ -17,6 +17,7 @@ import Details from './pages/details/Details';
 import BookRoom from './pages/bookroom/BookRoom';
 import PrivateRoute from './components/privateroute/PrivateRoute';
 import UpdateBooking from './pages/updateBooking/UpdateBooking';
+import AddReviews from './pages/addreviews/AddReviews';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,8 +50,14 @@ const router = createBrowserRouter([
         element: <PrivateRoute><MyBookings></MyBookings></PrivateRoute>,
       },
       {
-        path: "/updatebooking",
+        path: "/updatebooking/:id",
         element: <PrivateRoute><UpdateBooking></UpdateBooking></PrivateRoute>,
+        loader:({params})=> fetch(`http://localhost:5000/booking/${params.id}`),
+      },
+      {
+        path:"/addreview/:id",
+        element:<PrivateRoute><AddReviews></AddReviews></PrivateRoute>,
+        loader:({params})=>fetch(`http://localhost:5000/booking/${params.id}`),
       },
       {
         path: "/details/:id",
