@@ -16,6 +16,7 @@ const ReviewPage = () => {
                 <title>Review</title>
             </Helmet>
             <Navbar></Navbar>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 ml-2 mb-4" >
             {
                 reviews?
                 (reviews.map((review)=>{
@@ -30,6 +31,7 @@ const ReviewPage = () => {
                   )
 
             }
+            </div>
       
 <Footer></Footer>
         </div>

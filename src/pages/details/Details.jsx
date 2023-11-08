@@ -63,6 +63,7 @@ const Details = () => {
             </div>
             <div>
                 <h2 className="text-4xl text-red-900 font-mono text-center">Reviews On This Room</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 ml-2 mb-4">
             {
                 review?
                 (review.map((reviews)=>{
@@ -77,6 +78,7 @@ const Details = () => {
                   )
 
             }
+            </div>
             </div>
             {/* <ReviewPage></ReviewPage> */}
             {/* <Review id={room._id} ></Review> */}

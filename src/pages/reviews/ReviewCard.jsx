@@ -1,9 +1,8 @@
 const ReviewCard = ({ review }) => {
   console.log(review)
   return (
-    <div>
-        {/* <h2 className="text-4xl"> reviews:{review.length}</h2> */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 ml-2 mb-4">
+    
+        <div  >
           <div className="card bg-slate-300 w-96 text-red-900">
               <div className="card-body">
                   {review ? (
@@ -19,7 +18,7 @@ const ReviewCard = ({ review }) => {
               </div>
           </div>
       </div>
-    </div>
+  
      
   );
 };
