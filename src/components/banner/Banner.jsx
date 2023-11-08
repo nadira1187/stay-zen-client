@@ -18,11 +18,17 @@ const Banner = () => {
                 </div>
                 
             </header>
-            <div className=" max-w-lg m-auto">
+            <div className="flex flex-col lg:flex-row-reverse justify-center items-center">
               {/* <video src="https://youtu.be/i_s-ezg3Zkw"></video> */}
-                <p className="mb-4 p-4">
-                Welcome to StayZen, where the art of hospitality meets the lap of luxury. Nestled in the heart of ocean, our hotel offers a sanctuary of comfort and elegance for travelers seeking a remarkable stay.
+              <div><img className="" src="https://i.ibb.co/47ft2yC/single-gallery-image-1.jpg" alt="" /></div>
+              <div className="w-1/2">
+              <p className="mb-4 p-4">
+                <p className="text-2xl text-red-900 font-medium">Welcome to StayZen</p> 
+                <h2 className="text-4xl text-red-900 font-mono font-semibold">A New Vision of Luxury</h2>
+                <p className="text-xl text-red-900 ">Where the art of hospitality meets the lap of luxury. Nestled in the heart of ocean, our hotel offers a sanctuary of comfort and elegance for travelers seeking a remarkable stay.</p> 
                 </p>    
+              </div>
+                
             </div>
             <h2 className="text-4xl font-bold font-mono text-center text-red-900 my-6">Special Offers</h2>
 
