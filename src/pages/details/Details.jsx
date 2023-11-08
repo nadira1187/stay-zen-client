@@ -2,12 +2,23 @@ import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../../shared/navbar/Navbar";
 import Footer from "../../shared/footer/Footer";
 import { Helmet } from "react-helmet";
-import ReviewPage from "../reviews/ReviewPage";
+//import ReviewPage from "../reviews/ReviewPage";
+import { useEffect, useState } from "react";
+import ReviewCard from "../reviews/ReviewCard";
 //import Review from "./Review";
 
 
 const Details = () => {
     const room = useLoaderData();
+    const {_id}=room;
+    const [review,setReview]=useState([]);
+    useEffect(()=>{
+        fetch(`http://localhost:5000/review/${_id}`)
+        .then((res)=>res.json())
+        .then((data)=>setReview(data))
+
+    },[_id])
+    console.log(review)
    
     return (
         <div>
@@ -38,7 +49,10 @@ const Details = () => {
                     ) : (
                         <p className=" text-base font-normal text-red-900">Availability: Not Available</p>
                     )}
-                    <p className="text-base font-normal text-red-900">Special Offers :{room.specialOffers}</p>
+                   <p className="text-base font-normal text-red-900">
+  {room.specialOffers ? `Special Offers: ${room.specialOffers}` : 'No offers available'}
+</p>
+
                     <div className="flex justify-between">
                         <p className="text-xl text-red-900 font-semibold">Price: ${room.pricePerNight}</p>
                         <button className="my-6 btn normal-case btn-primary bg-red-900 text-white border-none" ><Link to={`/book/${room._id}`}>  Book Now</Link>
@@ -47,8 +61,25 @@ const Details = () => {
                     </div>
                 </div>
             </div>
+            <div>
+                <h2 className="text-4xl text-red-900 font-mono text-center">Reviews On This Room</h2>
+            {
+                review?
+                (review.map((reviews)=>{
+                   return <ReviewCard 
+                    key={review.service_id}
+                    review={reviews}
+                    ></ReviewCard>
+                })
+                ):
+                (
+                    <p>Loading.</p>
+                  )
+
+            }
+            </div>
             {/* <ReviewPage></ReviewPage> */}
-            {/* <Review service_id={room._id} ></Review> */}
+            {/* <Review id={room._id} ></Review> */}
             <Footer></Footer>
         </div>
     );

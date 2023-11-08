@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
+//import {video} from"../../../public/pexels.mp4"
 
 const Banner = () => {
     return (
@@ -18,11 +19,10 @@ const Banner = () => {
                 
             </header>
             <div className=" max-w-lg m-auto">
+              {/* <video src="https://youtu.be/i_s-ezg3Zkw"></video> */}
                 <p className="mb-4 p-4">
                 Welcome to StayZen, where the art of hospitality meets the lap of luxury. Nestled in the heart of ocean, our hotel offers a sanctuary of comfort and elegance for travelers seeking a remarkable stay.
-                </p>
-                
-                
+                </p>    
             </div>
             <h2 className="text-4xl font-bold font-mono text-center text-red-900 my-6">Special Offers</h2>
 
