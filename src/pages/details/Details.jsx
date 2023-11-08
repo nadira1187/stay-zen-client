@@ -13,7 +13,7 @@ const Details = () => {
     const { _id } = room;
     const [review, setReview] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/review/${_id}`)
+        fetch(`https://stay-zen-server.vercel.app/review/${_id}`)
             .then((res) => res.json())
             .then((data) => setReview(data))
 

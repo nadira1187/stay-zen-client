@@ -27,7 +27,7 @@ const UpdateBooking = () => {
 
         console.log(booking);
 
-        fetch(`http://localhost:5000/bookings/${_id}`, {
+        fetch(`https://stay-zen-server.vercel.app/bookings/${_id}`, {
             method: 'PUT', 
             headers: {
                 'content-type': 'application/json'

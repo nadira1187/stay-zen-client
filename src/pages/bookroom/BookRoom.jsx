@@ -48,7 +48,7 @@ const BookRoom = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 // User confirmed the booking, proceed to create the booking
-                fetch("http://localhost:5000/bookings", {
+                fetch("https://stay-zen-server.vercel.app/bookings", {
                     method: "POST",
                     headers: {
                         "content-type": "application/json",
@@ -59,7 +59,7 @@ const BookRoom = () => {
                 .then((data) => {
                     if (data.insertedId) {
                         const newAvailability = availability - 1;
-                        fetch(`http://localhost:5000/roomss/${_id}`, {
+                        fetch(`https://stay-zen-server.vercel.app/roomss/${_id}`, {
                             method: "PATCH",
                             headers: {
                                 "content-type": "application/json",

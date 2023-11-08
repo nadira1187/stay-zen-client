@@ -12,7 +12,7 @@ const MyBookings = () => {
     const [bookings, setBookings] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/booking?email=${user?.email}`, { credentials: "include" })
+        fetch(`https://stay-zen-server.vercel.app/booking?email=${user?.email}`, { credentials: "include" })
             .then((res) => res.json())
             .then((data) => setBookings(data));
     }, []);
@@ -56,7 +56,7 @@ const MyBookings = () => {
                     confirmButtonText: 'Yes, cancel it'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        fetch(`http://localhost:5000/bookingss/${bookingId}`, {
+                        fetch(`https://stay-zen-server.vercel.app/bookingss/${bookingId}`, {
                             method: 'DELETE'
                         })
                         .then((res) => res.json())

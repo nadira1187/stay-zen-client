@@ -44,12 +44,12 @@ const router = createBrowserRouter([
       {
         path: "/book/:id",
         element:<PrivateRoute><BookRoom></BookRoom></PrivateRoute> ,
-        loader:({params}) => fetch(`http://localhost:5000/rooms/${params.id}`),
+        loader:({params}) => fetch(`https://stay-zen-server.vercel.app/rooms/${params.id}`),
       },
       {
         path:"/review/:id",
         element:<ReviewPage></ReviewPage>,
-        loader:({params})=>fetch(`http://localhost:5000/review/${params.id}`),
+        loader:({params})=>fetch(`https://stay-zen-server.vercel.app/review/${params.id}`),
       },
       {
         path: "/mybookings",
@@ -58,17 +58,17 @@ const router = createBrowserRouter([
       {
         path: "/updatebooking/:id",
         element: <PrivateRoute><UpdateBooking></UpdateBooking></PrivateRoute>,
-        loader:({params})=> fetch(`http://localhost:5000/booking/${params.id}`),
+        loader:({params})=> fetch(`https://stay-zen-server.vercel.app/booking/${params.id}`),
       },
       {
         path:"/addreview/:id",
         element:<PrivateRoute><AddReviews></AddReviews></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:5000/booking/${params.id}`),
+        loader:({params})=>fetch(`https://stay-zen-server.vercel.app/booking/${params.id}`),
       },
       {
         path: "/details/:id",
         element:<Details></Details> ,
-        loader:({params}) => fetch(`http://localhost:5000/rooms/${params.id}`),
+        loader:({params}) => fetch(`https://stay-zen-server.vercel.app/rooms/${params.id}`),
         
       },
     ]
