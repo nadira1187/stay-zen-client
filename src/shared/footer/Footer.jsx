@@ -7,8 +7,8 @@ const Footer = () => {
             <footer className="footer footer-center p-10 bg-red-300 bg-opacity-20 text-base-content rounded">
   <nav className="grid grid-flow-col gap-4">
     <a className="link link-hover"><Link to="/">Home</Link></a> 
-    <a className="link link-hover"><Link to='/addproduct'>Add Product</Link> </a> 
-    <a className="link link-hover"><Link to="/mycart"> My Cart</Link> </a> 
+    <a className="link link-hover"><Link to='/rooms'>Rooms</Link> </a> 
+    <a className="link link-hover"><Link to="/mybookings"> My Bookings</Link> </a> 
     <a className="link link-hover">Contact</a>
   </nav> 
   <nav>
@@ -19,7 +19,7 @@ const Footer = () => {
     </div>
   </nav> 
   <aside>
-    <p>Copyright © 2023 - All right reserved by Lush Beauty corporation Ltd.</p>
+    <p>Copyright © 2023 - All right reserved by Stay Zen corporation Ltd.</p>
   </aside>
 </footer>
         </div>
