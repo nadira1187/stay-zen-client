@@ -13,7 +13,7 @@ const ReviewCard = ({ review }) => {
                           <p>Feedback: {review.comment}</p>
                       </>
                   ) : (
-                      <p className="text-4xl">No reviews available</p>
+                    <p className="text-3xl font-medium text-red-900">No Reviews Available</p>
                   )}
               </div>
           </div>

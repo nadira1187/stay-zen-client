@@ -41,6 +41,12 @@ const Login = () => {
             console.log(result.user)
             const loggedInUser = result.user;
                 console.log(loggedInUser);
+                if(result.user)
+                {
+                  swal("Signed in!", "You Signed in Successfully!", "success");
+                navigate(location?.state?location.state:'/');
+                }
+                
                 //const user = { email };
 
                 // get access token

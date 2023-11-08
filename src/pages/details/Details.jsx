@@ -10,19 +10,19 @@ import ReviewCard from "../reviews/ReviewCard";
 
 const Details = () => {
     const room = useLoaderData();
-    const {_id}=room;
-    const [review,setReview]=useState([]);
-    useEffect(()=>{
+    const { _id } = room;
+    const [review, setReview] = useState([]);
+    useEffect(() => {
         fetch(`http://localhost:5000/review/${_id}`)
-        .then((res)=>res.json())
-        .then((data)=>setReview(data))
+            .then((res) => res.json())
+            .then((data) => setReview(data))
 
-    },[_id])
+    }, [_id])
     console.log(review)
-   
+
     return (
         <div>
-             <Helmet>
+            <Helmet>
                 <title>Details</title>
             </Helmet>
             <Navbar></Navbar>
@@ -39,46 +39,46 @@ const Details = () => {
                 </div>
                 <div className="ml-3 text-neutral-content">
                     <h1 className="pt-10 text-3xl font-bold text-red-900">
-                        {room.description}
+                      {room.description}
                     </h1>
-                    <p className="pt-4 text-base font-normal text-red-900">
-                        {room.roomSize}
+                    <p className="pt-4 text-xl font-medium  text-red-900">
+                    Size Of Our Room:    {room.roomSize}
                     </p>
                     {room.availability ? (
-                        <p className=" text-base font-normal text-red-900">Availability: Available</p>
+                        <p className=" text-xl font-medium text-red-900">Availability: Available</p>
                     ) : (
-                        <p className=" text-base font-normal text-red-900">Availability: Not Available</p>
+                        <p className=" text-xl font-medium text-red-900">Availability: Not Available</p>
                     )}
-                   <p className="text-base font-normal text-red-900">
-  {room.specialOffers ? `Special Offers: ${room.specialOffers}` : 'No offers available'}
-</p>
+                    <p className="text-xl font-medium text-red-900">
+                        {room.specialOffers ? `Special Offers: ${room.specialOffers}` : 'No offers available'}
+                    </p>
 
                     <div className="flex justify-between">
                         <p className="text-xl text-red-900 font-semibold">Price: ${room.pricePerNight}</p>
                         <button className="my-6 btn normal-case btn-primary bg-red-900 text-white border-none" ><Link to={`/book/${room._id}`}>  Book Now</Link>
-                          
+
                         </button>
                     </div>
                 </div>
             </div>
             <div>
                 <h2 className="text-4xl text-red-900 font-mono text-center">Reviews On This Room</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 ml-2 mb-4">
-            {
-                review?
-                (review.map((reviews)=>{
-                   return <ReviewCard 
-                    key={review.service_id}
-                    review={reviews}
-                    ></ReviewCard>
-                })
-                ):
-                (
-                    <p>Loading.</p>
-                  )
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 ml-2 my-4">
+                    {
+                        review ?
+                            (review.map((reviews) => {
+                                return <ReviewCard
+                                    key={review.service_id}
+                                    review={reviews}
+                                ></ReviewCard>
+                            })
+                            ) :
+                            (
+                                <p className="text-3xl font-medium text-red-900">No Reviews Available</p>
+                            )
 
-            }
-            </div>
+                    }
+                </div>
             </div>
             {/* <ReviewPage></ReviewPage> */}
             {/* <Review id={room._id} ></Review> */}
