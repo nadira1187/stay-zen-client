@@ -2,6 +2,8 @@ import { Link, useLoaderData } from "react-router-dom";
 import Navbar from "../../shared/navbar/Navbar";
 import Footer from "../../shared/footer/Footer";
 import { Helmet } from "react-helmet";
+import ReviewPage from "../reviews/ReviewPage";
+//import Review from "./Review";
 
 
 const Details = () => {
@@ -45,6 +47,8 @@ const Details = () => {
                     </div>
                 </div>
             </div>
+            {/* <ReviewPage></ReviewPage> */}
+            {/* <Review service_id={room._id} ></Review> */}
             <Footer></Footer>
         </div>
     );
