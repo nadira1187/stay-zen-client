@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
-//import {video} from"../../../public/pexels.mp4"
 
 const Banner = () => {
   return (
@@ -16,10 +15,8 @@ const Banner = () => {
           <button className="btn btn-primary text-white normal-case bg-red-900 border-red-900"> <Link to='/login'>Get Started</Link></button>
 
         </div>
-
-      </header>
+    </header>
       <div data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="1000" className=" h-fit flex flex-col lg:flex-row-reverse justify-center items-center">
-        {/* <video src="https://youtu.be/i_s-ezg3Zkw"></video> */}
         <div>
         <div className="carousel carousel-center max-w-md p-4 space-x-4 bg-red-900 rounded-box">
           <div id="item1" className="carousel-item">
@@ -31,7 +28,6 @@ const Banner = () => {
           <div  id="item3" className="carousel-item">
           <img src="https://i.ibb.co/m9bQzDN/rooms-list-image-16.jpg" className="rounded-box" />
           </div>
-          
         </div>
         <div className="flex justify-center w-full py-2 gap-2">
   <a href="#item1" className="btn btn-xs">1</a> 
@@ -39,8 +35,6 @@ const Banner = () => {
   <a href="#item3" className="btn btn-xs">3</a>
 </div>
         </div>
-       
-        {/* <img className="" src="https://i.ibb.co/47ft2yC/single-gallery-image-1.jpg" alt="" /> */}
         <div className=" w-full lg:w-1/2">
           <p className="mb-4 p-4">
             <p className="text-2xl text-red-900 font-medium">Welcome to StayZen</p>
@@ -48,7 +42,6 @@ const Banner = () => {
             <p className="text-xl text-red-900 ">Where the art of hospitality meets the lap of luxury. Nestled in the heart of ocean, our hotel offers a sanctuary of comfort and elegance for travelers seeking a remarkable stay.</p>
           </p>
         </div>
-
       </div>
       <h2 className="text-4xl font-bold font-mono text-center text-red-900 my-6">Special Offers</h2>
 
@@ -64,10 +57,6 @@ const Banner = () => {
           </p>
         </div>
       </section>
-
-      <div className="max-w-lg m-auto">
-
-      </div>
     </div>
   );
 };
