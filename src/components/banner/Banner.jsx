@@ -3,9 +3,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
 
+
 const Banner = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <header style={{ backgroundImage: "url('https://i.ibb.co/Df8sT8G/banner-slider.jpg')" }}
         className="flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover"
       >

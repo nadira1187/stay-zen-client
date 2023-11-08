@@ -2,8 +2,8 @@
 
 const NewsLetter = () => {
     return (
-        <div>
-            <div className="w-84 h- card  bg-red-200">
+        <div className="overflow-hidden">
+            <div className="w-84 card  bg-red-200">
                 <h2 className=" my-5 text-4xl font-bold text-center text-red-900"> Subscribe To Our Newsletter <br /> For Exciting Offer,Updates<br />& Deals.</h2>
                 <div className="flex flex-col md:flex-row lg:flex-row justify-center items-center">
                     <div className="w-full lg:w-1/2">

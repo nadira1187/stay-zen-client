@@ -10,12 +10,14 @@ import { Helmet } from "react-helmet";
 const MyBookings = () => {
     const { user } = useContext(AuthContext);
     const [bookings, setBookings] = useState([]);
+    console.log(bookings);
 
     useEffect(() => {
-        fetch(`https://stay-zen-server.vercel.app/booking?email=${user?.email}`, { credentials: "include" })
+        fetch(`https://stay-zen-server.vercel.app/booking?email=${user?.email}`, { credentials: "include" },
+        )
             .then((res) => res.json())
-            .then((data) => setBookings(data));
-    }, []);
+            .then((data) =>setBookings(data));
+    }, [user]);
 
     const calculateCancellationDeadline = (bookingDate) => {
         const currentDate = Moment(); // Get the current date and time
@@ -84,7 +86,9 @@ const MyBookings = () => {
             </Helmet>
             <Navbar></Navbar>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 lg:grid-cols-3">
-                {bookings.map((booking) => (
+                {
+                    bookings?
+                (bookings.map((booking) => (
                     <BookingCard
                         key={booking._id}
                         booking={booking}
@@ -97,7 +101,9 @@ const MyBookings = () => {
                             <p>Booking can no longer be canceled.</p>
                         )}
                     </BookingCard>
-                ))}
+                ))):
+                ( <p>Loading</p>  )
+                }
             </div>
             <Footer></Footer>
         </div>
