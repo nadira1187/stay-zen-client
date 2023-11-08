@@ -1,4 +1,5 @@
-# Client live link(https://stay-zen-client.web.app)(please use microsoft edge)
+# Client live link(https://stay-zen-client.web.app)
+(please use microsoft edge)
 # Five key functionalities 
 
 ## User-Friendly Interface:

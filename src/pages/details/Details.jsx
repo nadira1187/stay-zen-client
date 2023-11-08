@@ -62,8 +62,8 @@ const Details = () => {
                 </div>
             </div>
             <div>
-                <h2 className="text-4xl text-red-900 font-mono text-center">Reviews On This Room</h2>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 ml-2 my-4">
+                <h2 className="text-xl md:text-4xl text-red-900 font-mono text-center">Reviews On This Room</h2>
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 ml-0 md:ml-2 my-4">
                     {
                         review ?
                             (review.map((reviews) => {

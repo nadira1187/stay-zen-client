@@ -16,8 +16,8 @@ const ReviewPage = () => {
                 <title>Review</title>
             </Helmet>
             <Navbar></Navbar>
-            <h2 className="text-4xl text-red-900 font-mono text-center my-5">Reviews On This Room</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 ml-2 mb-4" >
+            <h2 className="text-xl lg:text-4xl text-red-900 font-mono text-center my-5">Reviews On This Room</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 ml-0 lg:ml-2 mb-4" >
             {
                 reviews?
                 (reviews.map((review)=>{

@@ -31,7 +31,7 @@ console.log(rooms)
             <Navbar></Navbar>
             <div className="mt-4 ml-0 lg:ml-4">
 
-                <button className="btn btn-primary text-white mr-2 normal-case bg-red-900 border-none" onClick={handleAsc}>
+                <button className="btn btn-primary text-white mr-2 mb-2 normal-case bg-red-900 border-none" onClick={handleAsc}>
                     Sort by Price (Low to High)
                 </button>
                 <button className="btn text-white btn-primary bg-red-900 normal-case border-none" onClick={handleDesc}>Sort by Price (High to Low)</button>

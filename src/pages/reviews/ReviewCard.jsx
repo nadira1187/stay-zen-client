@@ -3,7 +3,7 @@ const ReviewCard = ({ review }) => {
   return (
     
         <div  >
-          <div className="card bg-slate-300 w-96 text-red-900">
+          <div className="card bg-slate-300 w-80 md:w-96 text-red-900">
               <div className="card-body">
                   {review ? (
                       <>
