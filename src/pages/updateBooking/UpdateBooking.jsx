@@ -37,7 +37,7 @@ const UpdateBooking = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            if(data.insertedId){
+            if(data.modifiedCount){
                 swal('Your booking updated successfully')
             }
         })
