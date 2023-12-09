@@ -1,5 +1,5 @@
 # Client live link(https://hapless-approval.surge.sh)
-(please use microsoft edge)
+# server-link:(https://github.com/nadira1187/stay-zen-server)
 # Five key functionalities 
 
 ## User-Friendly Interface:
