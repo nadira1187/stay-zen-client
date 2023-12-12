@@ -1,5 +1,11 @@
 # Client live link(https://hapless-approval.surge.sh)
 # server-link:(https://github.com/nadira1187/stay-zen-server)
+# Unique features:
+1. Dynamic Room Availability with Real-Time Updates:The applicationfeatures a dynamic room availability system that provides real-timeupdates to users. As rooms are booked, the availability status is updatedinstantly.
+2. Interactive Map Integration for Nearby Attractions:In addition todisplaying the hotel's location, the map on the home page is interactiveand includes markers for nearby attractions and points of interest.
+3. Users have the ability to cancel a booking, but there's a time restriction inplace. They can only cancel a booking within a specified period before theactual booking date.
+# Project Selling Line:
+"Revolutionize your travel experience with our Hotel Booking Web Application!Seamlessly blending cutting-edge technology and user-centric design, myplatform solves the age-old problems of tedious booking processes andunreliable reviews. Enjoy hassle-free reservations, authentic user testimonials, and a personalized journey tailored to your preferences.”
 # Five key functionalities 
 
 ## User-Friendly Interface:
