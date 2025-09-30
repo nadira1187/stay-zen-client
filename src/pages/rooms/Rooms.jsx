@@ -29,7 +29,7 @@ console.log(rooms)
                 <title>Rooms</title>
             </Helmet>
             <Navbar></Navbar>
-            <div className="mt-4 ml-0 lg:ml-4">
+            <div className="mt-20 ml-0 lg:ml-4">
 
                 <button className="btn btn-primary text-white mr-2 mb-2 normal-case bg-red-900 border-none" onClick={handleAsc}>
                     Sort by Price (Low to High)
