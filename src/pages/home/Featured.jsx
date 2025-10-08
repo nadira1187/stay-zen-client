@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Featured = () => {
   const features = [
     {
@@ -50,9 +52,9 @@ const Featured = () => {
               </div>
               <div className="p-6">
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                <button className="mt-4 text-red-700 font-medium hover:text-red-600 transition-colors">
+                <Link to="/rooms" className="mt-4 text-red-700 font-medium hover:text-red-600 transition-colors">
                   Learn More →
-                </button>
+                </Link>
               </div>
             </div>
           ))}

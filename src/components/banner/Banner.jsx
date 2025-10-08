@@ -52,8 +52,7 @@ const Banner = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div
             data-aos="fade-up"
@@ -119,23 +118,22 @@ const Banner = () => {
         </div>
       </section>
 
-      {/* Special Offers Section with Parallax */}
       <section
-        className="relative py-32 bg-fixed bg-center bg-cover"
+        className="relative py-48 md:py-56 lg:py-64 bg-fixed bg-center bg-cover "
         style={{
           backgroundImage: "url('https://i.ibb.co/8xjxJxL/img.jpg')",
-          transform: `translateY(${scrollY * 0.3}px)`,
+          transform: `translateY(${scrollY * 0.2}px)`,
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+          <div className="text-center mb-24 md:mb-28 lg:mb-32">
             <h2
               data-aos="fade-up"
               data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               data-aos-duration="1000"
-              className="text-4xl md:text-5xl font-bold text-white mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
             >
               Special Offers
             </h2>
@@ -147,28 +145,28 @@ const Banner = () => {
             data-aos-offset="200"
             data-aos-easing="ease-in-sine"
             data-aos-duration="1000"
-            className="grid lg:grid-cols-2 gap-12 items-center"
+            className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center max-w-6xl mx-auto"
           >
-            <div>
+            <div className="order-2 lg:order-1">
               <img
-                className="w-full h-96 object-cover rounded-3xl shadow-2xl"
+                className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-2xl"
                 src="https://i.ibb.co/P66bKqj/promotional.jpg"
                 alt="Special Offer"
               />
             </div>
 
-            <div className="bg-red-200/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl">
-              <h3 className="text-3xl md:text-4xl font-bold text-red-900 mb-4">
+            <div className="order-1 lg:order-2 bg-red-200/90 backdrop-blur-sm rounded-3xl p-12 md:p-16 lg:p-20 shadow-2xl">
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-red-900 mb-6">
                 Stay & Dine Special
-                <span className="text-red-700 block text-2xl md:text-3xl mt-2">Now only 50% off</span>
+                <span className="text-red-700 block text-2xl md:text-3xl lg:text-4xl mt-4">Now only 50% off</span>
               </h3>
-              <h4 className="text-xl font-medium text-red-800 mb-6">Deluxe hotel room & meal for two</h4>
-              <p className="text-red-800 leading-relaxed mb-8">
+              <h4 className="text-xl md:text-2xl font-medium text-red-800 mb-8">Deluxe hotel room & meal for two</h4>
+              <p className="text-base md:text-lg text-red-800 leading-relaxed mb-10">
                 Introducing our Stay & Dine Special, a perfect combination of luxury and culinary delight. Treat
                 yourself and a loved one to an unforgettable experience with our deluxe hotel room and exquisite meal
                 for two.
               </p>
-              <button className="px-8 py-4 bg-red-900 text-white rounded-xl hover:bg-red-800 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <button className="px-10 py-5 bg-red-900 text-white rounded-xl hover:bg-red-800 transition-all duration-300 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Book Now
               </button>
             </div>

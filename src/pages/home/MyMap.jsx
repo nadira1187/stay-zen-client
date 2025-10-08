@@ -5,7 +5,6 @@ import { Map, Marker } from "pigeon-maps"
 
 export function MyMap() {
   const [hue, setHue] = useState(0)
-  const color = `hsl(${hue % 360}deg 39% 70%)`
 
   return (
     <section className="py-20 bg-white">
